@@ -25,7 +25,7 @@ SECRET_KEY = '4jm)jx1qy4-rk46n)3g+&!fc-d^i1xsk=px^pc-@&dj0et4v3s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'apps.perfiles',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,11 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_URL = '/inicia-sesion/'
+LOGIN_REDIRECT_URL = ''
+
+LOGOUT_REDIRECT_URL = ''
 
 WSGI_APPLICATION = 'man_ascensores.wsgi.application'
 
@@ -104,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
